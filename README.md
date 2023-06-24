@@ -1,4 +1,15 @@
-# Flask-Docker-App
+# Description
+The web application was deployed using docker and contains the following APIs:
+
+/permissions?code=<number>
+This API method accepts a code given by number and returns a JSON object specifying the permissions represented for owner, group and other. E.g., The request /permissions?code=744 should return. 
+
+{owner: [read, write, execute], group [read], other:[read]}.
+
+/parity?b1=<bits>&b2=<bits>&b3=<bits>&b4=<bits>
+This API method accepts the bits on corresponding disk blocks of a RAID-4 and returns the parity bits. Assume that each block has two bits. E.g., The request /parity?b1=00&b2=10&b3=11&b4=10 should return 11.
+
+# Running the web application
 Assuming Docker is already installed:
 
 ### 1. From your terminal, navigate to the created directory name **"Flask-Docker-App"**
